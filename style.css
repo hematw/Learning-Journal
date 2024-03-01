@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    font-family: "Roboto", Tahoma,  Verdana, sans-serif;
+    font-family: "Roboto", Tahoma, Verdana, sans-serif;
     color: #222;
 }
 
@@ -15,6 +15,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1em 1.5em;
+    color: #222;
     background-color: #fff;
     height: 60px;
 }
@@ -24,37 +25,48 @@ header {
     align-items: center;
 }
 
+.logo-container h3 {
+    font-size: 1em;
+}
+
 .logo {
     margin-right: 10px;
 }
 
-nav ul {
-    list-style: none;
+nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 30px #222;
+    background-color: #fff;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-left: 20px;
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
 }
 
 nav li a {
+    width: 100%;
+    display: inline-block;
     text-decoration: none;
     color: #222;
+    padding: 0.8em;
 }
 
 .section-one {
     position: relative;
-    background: url("images/background2.jpg");
+    background-image: url("images/background2.jpg");
     background-position: center;
     background-size: cover;
-    height: 40vh;
 }
 
 .main-content {
     padding: 2rem;
     color: #fff;
-    position: absolute;
-    bottom: 0;
 }
 
 .date {
@@ -62,20 +74,19 @@ nav li a {
 }
 
 .main-content h1 {
-    font-size: 1.5rem;
+    font-size: 7vw;
 }
 
 .blogs-container {
-    padding: 2rem ;
+    padding: 2rem;
     margin: auto;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1.6em;
+    gap: 2em;
 }
 
 .blog {
-    flex-basis: 365px;
+    flex-basis: 300px;
     flex-grow: 1;
 }
 
@@ -91,11 +102,32 @@ footer {
     color: #fff;
 }
 
+.about-content {
+    padding: 2rem;
+}
+
+.about-content img {
+    width: 170px;
+    border-radius: 50%;
+}
+
+.title {
+    font-weight: 600;
+}
+
+.menu-btn {
+    display: block;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+
 @media (min-width: 768px) {
     .section-one {
         height: calc(100vh - 60px);
     }
-    
+
     .main-content {
         width: 65vw;
     }
@@ -103,13 +135,20 @@ footer {
     .main-content p {
         font-size: 1.25rem;
     }
+
     .main-content .date {
         font-size: 1rem;
     }
 
     .main-content h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
-
+    nav {
+        display: block;
+    }
+    .main-content {
+        position: absolute;
+        bottom: 0;
+    }
 }
